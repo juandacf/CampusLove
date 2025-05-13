@@ -9,8 +9,8 @@ namespace campuslove.domain.entities
     {
         public int id_match {get;set;}
 
-        public string cedula_ciudadania_dador {get;set;}
+        public string cedula_ciudadania_1 {get;set;}
 
-        public string cedula_ciudadania_recipiente {get;set;}
+        public string cedula_ciudadania_2 {get;set;}
     }
 }

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace campuslove.domain.entities
 {
-    public class like
+    public class Match
     {
-        public int id_like {get;set;}
+        public int id_match {get;set;}
 
         public string cedula_ciudadania_dador {get;set;}
 

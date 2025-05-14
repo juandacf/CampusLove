@@ -9,5 +9,7 @@ namespace campuslove.domain.factory
     public interface IDbFactory
     {
         IInteresRepository CreateInteresRepository();
+
+        ICarreraRepository CreateCarreraRepository();
     }
 }

@@ -10,6 +10,7 @@ namespace campuslove.domain.entities
         public string cedula_ciudadania {get;set;} 
         public string nombre {get;set;}
         public string apellido {get;set;}
+        public string contraseña {get;set;}
         public bool genero {get;set;}  //true: masculino   false: femenino
         public int id_carrera {get;set;}
     }

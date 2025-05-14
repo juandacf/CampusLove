@@ -10,16 +10,13 @@ internal class Program
     {
          IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
          var ServicioInteres = new InteresService(factory.CreateInteresRepository());
+          var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
 
-       Interes interes = new Interes {
-        id_interes = 16,
-        nombre_interes = "ejemplitoModificado"
-       };
-    
-    ServicioInteres.EliminarInteres(16);
-    
+          Carrera carrera = new Carrera {
+            id_carrera =9,
+            nombre_carrera = "Ingeñero Modificado"
+          };
 
-
-
+          ServicioCarrera.EliminarCarrera(9);
     }
 }

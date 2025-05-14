@@ -15,6 +15,11 @@ namespace campuslove.infrastructure.PostgreSQL
             _connectionString = connectionString;
         }
 
+        public ICarreraRepository CreateCarreraRepository()
+        {
+            return new ImpCarreraRepository(_connectionString);
+        }
+
         public IInteresRepository CreateInteresRepository()
         {
             return new ImpInteresRepository(_connectionString);

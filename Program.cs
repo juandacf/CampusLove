@@ -11,12 +11,18 @@ internal class Program
          IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
          var ServicioInteres = new InteresService(factory.CreateInteresRepository());
           var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
+        var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
 
-          Carrera carrera = new Carrera {
-            id_carrera =9,
-            nombre_carrera = "Ingeñero Modificado"
-          };
+        Usuario usuario = new Usuario {
+            cedula_ciudadania = "1007669080",
+            nombre = "JuanEditado",
+            apellido = "Caballero",
+            contraseña = "juanda0425",
+            genero = false,
+            id_carrera=1
+        };
 
-          ServicioCarrera.EliminarCarrera(9);
+        ServicioUsuario.EliminarUsuario("1007669080");
+          
     }
 }

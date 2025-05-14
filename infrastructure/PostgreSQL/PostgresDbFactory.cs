@@ -24,5 +24,10 @@ namespace campuslove.infrastructure.PostgreSQL
         {
             return new ImpInteresRepository(_connectionString);
         }
+
+        public IUsuarioRepository CreateUsuarioRepository()
+        {
+            return new ImpUsuarioRepository(_connectionString);
+        }
     }
 }

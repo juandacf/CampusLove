@@ -11,5 +11,7 @@ namespace campuslove.domain.factory
         IInteresRepository CreateInteresRepository();
 
         ICarreraRepository CreateCarreraRepository();
+
+        IUsuarioRepository CreateUsuarioRepository();
     }
 }

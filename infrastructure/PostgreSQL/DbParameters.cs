@@ -7,6 +7,6 @@ namespace campuslove.infrastructure.PostgreSQL
 {
     public class DbParameters
     {
-        public static string Parameters = "Host=127.0.0.1;Port=5432;Database=sgi_app;Username=postgres;Password=juanda0425;";
+        public static string Parameters = "Host=127.0.0.1;Port=5432;Database=CampusLove;Username=postgres;Password=juanda0425;";
     }
 }

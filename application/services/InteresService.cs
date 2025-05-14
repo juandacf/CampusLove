@@ -29,5 +29,9 @@ namespace campuslove.application.services
                 Console.WriteLine($"id: {a.id_interes}    nombre: {a.nombre_interes}");
             }
         }
+
+        public void EditarInteres(Interes interes){
+            _repo.Actualizar(interes);
+        }
     }
 }

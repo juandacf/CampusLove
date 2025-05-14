@@ -38,7 +38,7 @@ private readonly ConexionPostgresSingleton _conexion;
         public void Eliminar(int var)
         {
             var connection = _conexion.ObtenerConexion();
-            string query = "DETELE FROM interes WHERE id=@id";
+            string query = "DELETE FROM interes WHERE id=@id";
             using var cmd = new NpgsqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@id", var);
             cmd.ExecuteNonQuery();

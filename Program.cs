@@ -11,7 +11,12 @@ internal class Program
          IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
          var ServicioInteres = new InteresService(factory.CreateInteresRepository());
 
-        ServicioInteres.VerInteres();
+       Interes interes = new Interes {
+        id_interes = 16,
+        nombre_interes = "ejemplitoModificado"
+       };
+    
+    ServicioInteres.EliminarInteres(16);
     
 
 

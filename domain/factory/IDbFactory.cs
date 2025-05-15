@@ -1,5 +1,6 @@
 using campuslove.domain.ports;
 using campusLove.domain.ports;
+using CampusLove.domain.ports;
 
 namespace campuslove.domain.factory
 {
@@ -15,6 +16,7 @@ namespace campuslove.domain.factory
 
         ILikeRepository CreateLikeRepository();
 
+        IMatchesRepository CreateMatchesRepository();
 
         
     }

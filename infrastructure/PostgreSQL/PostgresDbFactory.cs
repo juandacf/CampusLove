@@ -7,6 +7,7 @@ using campuslove.domain.ports;
 using campuslove.infrastructure.repositories;
 using campusLove.domain.ports;
 using campusLove.infrastructure.repositories;
+using CampusLove.domain.ports;
 
 
 namespace campuslove.infrastructure.PostgreSQL
@@ -33,7 +34,10 @@ namespace campuslove.infrastructure.PostgreSQL
             return new ImpLikeRepository(_connectionString);
         }
 
-    
+        public IMatchesRepository CreateMatchesRepository()
+        {
+            return new ImpMatchesRepository(_connectionString);
+        }
 
         public ISesionRepository CreateSesionRepository()
         {

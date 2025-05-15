@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using campuslove.domain.factory;
 using campuslove.domain.ports;
 using campuslove.infrastructure.repositories;
+using CampusLove.domain.ports;
+using CampusLove.infrastructure.repositories;
 
 namespace campuslove.infrastructure.PostgreSQL
 {
@@ -23,6 +25,11 @@ namespace campuslove.infrastructure.PostgreSQL
         public IInteresRepository CreateInteresRepository()
         {
             return new ImpInteresRepository(_connectionString);
+        }
+
+        public ILikeRepository CreateLikeRepository()
+        {
+            return new ImpLikeRepository(_connectionString);
         }
 
         public ISesionRepository CreateSesionRepository()

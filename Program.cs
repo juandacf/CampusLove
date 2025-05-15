@@ -2,6 +2,7 @@
 using campuslove.domain.entities;
 using campuslove.domain.factory;
 using campuslove.infrastructure.PostgreSQL;
+using CampusLove.application.services;
 
 namespace campuslove;
 internal class Program
@@ -13,14 +14,12 @@ internal class Program
           var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
         var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
         var ServicioSesion = new SesionService(factory.CreateSesionRepository());
-        
+        var ServicioLike = new LikesService(factory.CreateLikeRepository());
 
-        Sesion  sesion = new Sesion {
-            cedula_ciudadania_ciudadania = "1001",
-            cantidad_likes = 88,
-            usuario_habilitado = true
-        };
-        ServicioSesion.EliminarSesion(11);
+
+       
+
+        ServicioLike.EliminarLike(12);
           
     }
 }

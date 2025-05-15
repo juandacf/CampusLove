@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using campuslove.domain.ports;
+using CampusLove.domain.ports;
 
 namespace campuslove.domain.factory
 {
@@ -15,5 +16,7 @@ namespace campuslove.domain.factory
         IUsuarioRepository CreateUsuarioRepository();
 
         ISesionRepository CreateSesionRepository();
+
+        ILikeRepository CreateLikeRepository();
     }
 }

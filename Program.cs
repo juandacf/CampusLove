@@ -12,17 +12,15 @@ internal class Program
          var ServicioInteres = new InteresService(factory.CreateInteresRepository());
           var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
         var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
+        var ServicioSesion = new SesionService(factory.CreateSesionRepository());
+        
 
-        Usuario usuario = new Usuario {
-            cedula_ciudadania = "1007669080",
-            nombre = "JuanEditado",
-            apellido = "Caballero",
-            contraseña = "juanda0425",
-            genero = false,
-            id_carrera=1
+        Sesion  sesion = new Sesion {
+            cedula_ciudadania_ciudadania = "1001",
+            cantidad_likes = 88,
+            usuario_habilitado = true
         };
-
-        ServicioUsuario.EliminarUsuario("1007669080");
+        ServicioSesion.EliminarSesion(11);
           
     }
 }

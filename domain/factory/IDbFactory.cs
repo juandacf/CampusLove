@@ -13,5 +13,7 @@ namespace campuslove.domain.factory
         ICarreraRepository CreateCarreraRepository();
 
         IUsuarioRepository CreateUsuarioRepository();
+
+        ISesionRepository CreateSesionRepository();
     }
 }

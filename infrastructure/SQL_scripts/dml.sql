@@ -55,16 +55,16 @@ INSERT INTO interes_usuario (cedula_ciudadania, id_interes) VALUES
 
 -- SESIONES
 INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES
-('1001', TRUE, 5, TRUE),
-('1002', FALSE, 0, TRUE),
-('1003', TRUE, 3, TRUE),
-('1004', FALSE, 0, FALSE),
-('1005', TRUE, 2, TRUE),
-('1006', TRUE, 4, TRUE),
-('1007', FALSE, 0, TRUE),
-('1008', TRUE, 6, TRUE),
-('1009', FALSE, 0, FALSE),
-('1010', TRUE, 1, TRUE);
+('1001', NOW(), 5, TRUE),
+('1002', NOW(), 0, TRUE),
+('1003', NOW(), 3, TRUE),
+('1004', NOW(), 0, FALSE),
+('1005', NOW(), 2, TRUE),
+('1006', NOW(), 4, TRUE),
+('1007', NOW(), 0, TRUE),
+('1008', NOW(), 6, TRUE),
+('1009', NOW(), 0, FALSE),
+('1010', NOW(), 1, TRUE);
 
 -- LIKES
 INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES

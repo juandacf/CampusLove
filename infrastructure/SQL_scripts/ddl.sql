@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS usuario (
 CREATE TABLE IF NOT EXISTS sesion (
     id SERIAL,
     cedula_ciudadania VARCHAR,
-    fecha_ultimo_like  BOOLEAN,
+    fecha_ultimo_like  TIMESTAMP,
     cantidad_likes DECIMAL(2,0),
     usuario_habilitado BOOLEAN,
     PRIMARY KEY(id),

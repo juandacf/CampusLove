@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace campuslove.domain.entities
 {
-    public class Match
+    public class Matches
     {
         public int id_match {get;set;}
 

@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using campuslove.domain.ports;
-using CampusLove.domain.ports;
+using campusLove.domain.ports;
 
 namespace campuslove.domain.factory
 {
@@ -18,5 +14,8 @@ namespace campuslove.domain.factory
         ISesionRepository CreateSesionRepository();
 
         ILikeRepository CreateLikeRepository();
+
+
+        
     }
 }

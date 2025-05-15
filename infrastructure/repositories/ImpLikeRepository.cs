@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using campuslove.domain.entities;
 using campuslove.domain.ports;
 using campuslove.infrastructure.postgreSQL;
-using CampusLove.domain.ports;
+using campusLove.domain.ports;
 using Npgsql;
 
-namespace CampusLove.infrastructure.repositories
+namespace campusLove.infrastructure.repositories
 {
     public class ImpLikeRepository : IGenericRepository<Like>, ILikeRepository
     {

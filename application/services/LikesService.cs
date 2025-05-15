@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using campuslove.domain.entities;
-using CampusLove.domain.ports;
+using campusLove.domain.ports;
 
 namespace CampusLove.application.services
 {

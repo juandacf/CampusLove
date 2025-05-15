@@ -9,17 +9,19 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-         IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
-         var ServicioInteres = new InteresService(factory.CreateInteresRepository());
-          var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
+        IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
+        var ServicioInteres = new InteresService(factory.CreateInteresRepository());
+        var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
         var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
         var ServicioSesion = new SesionService(factory.CreateSesionRepository());
         var ServicioLike = new LikesService(factory.CreateLikeRepository());
 
 
+
+
        
 
-        ServicioLike.EliminarLike(12);
+        
           
     }
 }

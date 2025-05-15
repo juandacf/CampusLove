@@ -2,7 +2,7 @@
 using campuslove.domain.entities;
 using campuslove.domain.factory;
 using campuslove.infrastructure.PostgreSQL;
-using CampusLove.application.services;
+using campusLove.application.services;
 
 namespace campuslove;
 internal class Program
@@ -16,7 +16,7 @@ internal class Program
         var ServicioSesion = new SesionService(factory.CreateSesionRepository());
         var ServicioLike = new LikesService(factory.CreateLikeRepository());
 
-
+        ServicioLike.VerLikes();
 
 
        

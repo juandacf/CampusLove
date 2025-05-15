@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using campuslove.domain.entities;
 using campusLove.domain.ports;
 
-namespace CampusLove.application.services
+namespace campusLove.application.services
 {
     public class LikesService
     {

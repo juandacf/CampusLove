@@ -5,9 +5,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using campuslove.domain.entities;
 using campuslove.domain.ports;
-using CampusLove.domain.ports;
+using campusLove.domain.ports;
 
-namespace CampusLove.application.services
+namespace campusLove.application.services
 {
     public class MatchesService
     {

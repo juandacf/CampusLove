@@ -7,7 +7,7 @@ using campuslove.domain.ports;
 
 namespace campusLove.domain.ports
 {
-    public interface IMatchesRepository:IGenericRepository<Matches>
+    public interface IUsuarioInteresRepository: IGenericRepository<UsuarioInteres>
     {
         
     }

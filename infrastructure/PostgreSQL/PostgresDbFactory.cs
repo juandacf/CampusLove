@@ -7,7 +7,6 @@ using campuslove.domain.ports;
 using campuslove.infrastructure.repositories;
 using campusLove.domain.ports;
 using campusLove.infrastructure.repositories;
-using CampusLove.domain.ports;
 
 
 namespace campuslove.infrastructure.PostgreSQL
@@ -42,6 +41,11 @@ namespace campuslove.infrastructure.PostgreSQL
         public ISesionRepository CreateSesionRepository()
         {
             return new ImpSesionRepository(_connectionString);
+        }
+
+        public IUsuarioInteresRepository CreateUsuarioInteresRepository()
+        {
+            return new ImpUsuarioInteresRepository(_connectionString);
         }
 
         public IUsuarioRepository CreateUsuarioRepository()

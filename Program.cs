@@ -17,8 +17,16 @@ internal class Program
         var ServicioSesion = new SesionService(factory.CreateSesionRepository());
         var ServicioLike = new LikesService(factory.CreateLikeRepository());
         var ServicioMatch = new MatchesService(factory.CreateMatchesRepository());
+        var ServicioIU = new UsuarioInteresService(factory.CreateUsuarioInteresRepository());
 
-       
+        UsuarioInteres ejemplo = new UsuarioInteres
+        {
+            id_usuario_interes = 0,
+            cedula_ciudadania = "1010",
+            id_interes = 2,
+         };
+
+        ServicioIU.EliminarUsuarioInteres(32);
 
        
 

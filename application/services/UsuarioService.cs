@@ -26,7 +26,17 @@ namespace campuslove.application.services
         public void VerUsuarios (){
             var lista = _repo.ObtenerTodos();
             foreach (var a in lista) {
-                Console.WriteLine($"C.C.: {a.cedula_ciudadania}    nombre: {a.nombre}  apellido: {a.apellido} genero: {a.genero} ");
+                string Generousuario;
+                if (a.genero == true)
+                {
+                    Generousuario = "Masculino";
+                }
+                else
+                {
+                    Generousuario = "Femenino";
+                }
+
+                Console.WriteLine($"C.C.: {a.cedula_ciudadania}    nombre: {a.nombre}  apellido: {a.apellido} genero: {Generousuario} ");
             }
         }
 

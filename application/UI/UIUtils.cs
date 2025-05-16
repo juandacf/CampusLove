@@ -10,6 +10,7 @@ namespace campuslove.application.UI
         public static bool VerificadorGenero()
         {
             Console.Clear();
+            Console.WriteLine("Por favor, ingrese el género del usuario h/m");
             char keyInfo = Console.ReadKey(true).KeyChar;
 
             switch (keyInfo)

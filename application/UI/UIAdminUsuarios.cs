@@ -32,11 +32,10 @@ namespace CampusLove.application.UI
                         string ApellidoUsuario = Console.ReadLine();
                         Console.WriteLine("Por favor, ingrese la contraseña del usuario: ");
                         string ContraseñaUsuario = Console.ReadLine();
-                        Console.WriteLine("Por favor, ingrese el género del usuario h/m");
-                        Console.Clear();
+                        
                         ServicioCarrera.VerCarrera();
                         Console.WriteLine("Por favor, ingrese el id de la carrera del usuario: ");
-                        int IdCarreraUsuario = int.Parse(Console.ReadLine());
+                        int IdCarreraUsuario = int.Parse(Console.ReadLine());                    
                         bool GeneroUsuario = UIUtils.VerificadorGenero();
                         Usuario usuario = new Usuario
                         {
@@ -52,9 +51,9 @@ namespace CampusLove.application.UI
                         Console.WriteLine("El usuario ha sido creado con éxito. Presione enter para volver al menú:");
                         Console.ReadKey(true);
                         break;
-                    case '2':
-                        Console.Clear();
-                        Console.WriteLine("Por favor, ingrese la cédula de ciudadanía del usuario a editar.");
+                    case '3':
+                       Console.Clear();
+                        Console.WriteLine("Por favor, ingrese la cédula de ciudadanía del usuario a editar:");
                         string CedulaCiudadaniaE = Console.ReadLine();
                         Console.WriteLine("Por favor, ingrese el nuevo nombre del usuario:");
                         string NombreUsuarioE = Console.ReadLine();
@@ -62,11 +61,10 @@ namespace CampusLove.application.UI
                         string ApellidoUsuarioE = Console.ReadLine();
                         Console.WriteLine("Por favor, ingrese la nueva contraseña del usuario: ");
                         string ContraseñaUsuarioE = Console.ReadLine();
-                        Console.WriteLine("Por favor, ingrese el nuevo género del usuario h/m");
-                        Console.Clear();
+                        
                         ServicioCarrera.VerCarrera();
-                        Console.WriteLine("Por favor, ingrese el id de la nueva carrera del usuario: ");
-                        int IdCarreraUsuarioE = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Por favor, ingrese el nuevo id de la carrera del usuario: ");
+                        int IdCarreraUsuarioE = int.Parse(Console.ReadLine());                    
                         bool GeneroUsuarioE = UIUtils.VerificadorGenero();
                         Usuario usuarioE = new Usuario
                         {
@@ -79,10 +77,10 @@ namespace CampusLove.application.UI
 
                         };
                         ServicioUsuario.EditarUsuario(usuarioE);
-                        Console.WriteLine("El usuario ha sido creado con éxito. Presione enter para volver al menú:");
+                        Console.WriteLine("El usuario ha sido editadp con éxito. Presione enter para volver al menú:");
                         Console.ReadKey(true);
                         break;
-                    case '3':
+                    case '2':
                         Console.Clear();
                         ServicioUsuario.VerUsuarios();
                         Console.WriteLine("Por favor, presione enter para volver al menú:");

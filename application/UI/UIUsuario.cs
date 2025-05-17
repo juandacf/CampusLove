@@ -66,7 +66,19 @@ namespace campuslove.application.UI
                         Console.WriteLine("Por favor, ingresa tu contraaseña");
                         string ContraseñaLogin = Console.ReadLine();                        
                         UsuarioLoggeado = ServicioUsuario.LoginUsuario(CedulaLogin, ContraseñaLogin);
-                        Console.WriteLine(UsuarioLoggeado.nombre);
+                        if (UsuarioLoggeado != null)
+                        {
+                            Console.WriteLine($"Bienvenido, {UsuarioLoggeado.nombre}. Presione enter para ver sus opciones");
+                            Console.ReadKey(true);
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("El usuario no se pudo verificar. Por favor, presione enter para volver al menú de usuarios.");
+                            Console.ReadKey(true);
+                            MenuUsuario();
+
+                        }
                         break;
                     default:
                         Console.WriteLine("La opción ingresada no coincide con ninguna de nuestras opciones. Por favor, presione enter e inténtelo de nuevo.");

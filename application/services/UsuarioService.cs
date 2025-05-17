@@ -53,10 +53,17 @@ namespace campuslove.application.services
         public Usuario LoginUsuario(string cedula, string contraseña)
         {
             var lista = _repo.ObtenerTodos();
-            var UsuarioElegido = (from usuario in lista
-                                  where usuario.cedula_ciudadania == cedula
-                                  where usuario.cedula_ciudadania == contraseña
-                                  select usuario).FirstOrDefault();
+
+            Usuario UsuarioElegido =  null;
+            
+            foreach (var a in lista)
+            {
+                if (a.cedula_ciudadania == cedula && a.contraseña == contraseña)
+                {
+                    UsuarioElegido = a;
+                    Console.WriteLine("El usuario se pudo encontrar");
+                }
+            }
 
             return UsuarioElegido;
         }

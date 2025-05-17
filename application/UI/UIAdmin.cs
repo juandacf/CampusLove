@@ -22,7 +22,7 @@ namespace campusLove.application.UI
                         UIAdminInteres.MenuAdminInteres();
                         break;
                     case '3':
-
+                        UIAdminSesion.MenuAdminSesion();
                         break;
                     case '4':
 

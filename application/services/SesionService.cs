@@ -31,7 +31,7 @@ namespace campuslove.application.services
             var lista = _repo.ObtenerTodos();
             foreach (var item in lista)
             {
-                Console.WriteLine($"CC: {item.cedula_ciudadania_ciudadania}  fecha ultimo like: {item.fecha_ultimo_like}  cantidad likes:  {item.cantidad_likes}  usuario habilitado: {item.usuario_habilitado}");
+                Console.WriteLine($"idSesion: {item.id_sesion}  CC: {item.cedula_ciudadania_ciudadania}  fecha ultimo like: {item.fecha_ultimo_like}  cantidad likes:  {item.cantidad_likes}  usuario habilitado: {item.usuario_habilitado}");
             }
         }
     }

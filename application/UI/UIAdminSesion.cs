@@ -18,11 +18,13 @@ namespace campuslove.application.UI
 
         public static void MenuAdminSesion()
         {
+            
             IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
             var ServicioSesion = new SesionService(factory.CreateSesionRepository());
             var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Este es el menú de administrador para gestionar sesiones. Por favor, escoja una de las siguientes opciones: \n1.Agregar sesión   \n2.Ver sesiones \n3.Editar sesiones   \n4. Eliminar sesión  \n0. Volver al menú de admin  ");
                 Console.WriteLine("Opción: ");
                 ConsoleKeyInfo KeyPressed = Console.ReadKey();
@@ -50,8 +52,9 @@ namespace campuslove.application.UI
                         break;
                     case '2':
                         Console.Clear();
-                        
-                        
+                        ServicioSesion.verSesion();
+                        Console.WriteLine("Por favor, presione enter para continuar");
+                        Console.ReadKey(true);
                         break;
                     case '3':
                         Console.Clear();
@@ -79,6 +82,7 @@ namespace campuslove.application.UI
                         int IDsesion = int.Parse(Console.ReadLine());
                         ServicioSesion.EliminarSesion(IDsesion);
                         Console.WriteLine("La sesión pudo ser eliminada. Por favor, presione enter para continuar.");
+                        Console.ReadKey(true);
                         break;
                     default:
                         Console.WriteLine("La opción ingresada no coincide con ninguna de nuestras opciones. Por favor, presione enter e inténtelo de nuevo.");

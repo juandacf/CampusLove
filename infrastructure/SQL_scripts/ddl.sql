@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS usuario (
     nombre VARCHAR,
     apellido VARCHAR,
     genero BOOLEAN,
+    contraseña VARCHAR,
     id_carrera INTEGER,
     PRIMARY KEY(cedula_ciudadania),
     FOREIGN KEY(id_carrera)  REFERENCES carrera(id_carrera)

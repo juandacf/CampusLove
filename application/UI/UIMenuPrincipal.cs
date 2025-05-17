@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using campuslove.application.UI;
 using campusLove.application.UI;
 
 namespace campusLove.application.UI
@@ -20,7 +21,7 @@ namespace campusLove.application.UI
                         UIAdmin.MenuAdmin();
                     break;
                     case '2':
-
+                        UIUsuario.MenuUsuario();
                     break;
                     case  '0':
                     Console.Clear();

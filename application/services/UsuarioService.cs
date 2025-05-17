@@ -9,23 +9,28 @@ namespace campuslove.application.services
 {
     public class UsuarioService
     {
-         private readonly IUsuarioRepository _repo;
+        private readonly IUsuarioRepository _repo;
 
-         public UsuarioService(IUsuarioRepository repo){
-            _repo =repo;
+        public UsuarioService(IUsuarioRepository repo)
+        {
+            _repo = repo;
         }
 
-        public void CrearUsuario (Usuario usuario){
+        public void CrearUsuario(Usuario usuario)
+        {
             _repo.Crear(usuario);
         }
 
-        public void EliminarUsuario(string IdUsuario){
+        public void EliminarUsuario(string IdUsuario)
+        {
             _repo.Eliminar(IdUsuario);
         }
 
-        public void VerUsuarios (){
+        public void VerUsuarios()
+        {
             var lista = _repo.ObtenerTodos();
-            foreach (var a in lista) {
+            foreach (var a in lista)
+            {
                 string Generousuario;
                 if (a.genero == true)
                 {
@@ -40,8 +45,20 @@ namespace campuslove.application.services
             }
         }
 
-        public void EditarUsuario(Usuario usuario) {
+        public void EditarUsuario(Usuario usuario)
+        {
             _repo.Actualizar(usuario);
+        }
+
+        public Usuario LoginUsuario(string cedula, string contraseña)
+        {
+            var lista = _repo.ObtenerTodos();
+            var UsuarioElegido = (from usuario in lista
+                                  where usuario.cedula_ciudadania == cedula
+                                  where usuario.cedula_ciudadania == contraseña
+                                  select usuario).FirstOrDefault();
+
+            return UsuarioElegido;
         }
 
 

@@ -1,3 +1,4 @@
+using campuslove.application.UI;
 using campusLove.application.UI;
 using CampusLove.application.UI;
 
@@ -19,7 +20,7 @@ namespace campusLove.application.UI
                         UIAdminUsuarios.MenuAdminUsuarios();
                         break;
                     case '2':
-                        
+                        UIAdminInteres.MenuAdminInteres();
                         break;
                     case '3':
 

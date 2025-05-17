@@ -25,7 +25,7 @@ namespace campusLove.application.UI
                         UIAdminSesion.MenuAdminSesion();
                         break;
                     case '4':
-
+                        UIAdminCarrera.MenuAdminCarrera();
                         break;
                     case '0':
                         Console.Clear();

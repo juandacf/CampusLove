@@ -68,8 +68,8 @@ namespace campuslove.application.UI
                         UsuarioLoggeado = ServicioUsuario.LoginUsuario(CedulaLogin, ContraseñaLogin);
                         if (UsuarioLoggeado != null)
                         {
-                            Console.WriteLine($"Bienvenido, {UsuarioLoggeado.nombre}. Presione enter para ver sus opciones");
                             Console.ReadKey(true);
+                            UIUsuarioLogeado.MenuUsuarioLogeado();
 
                         }
                         else

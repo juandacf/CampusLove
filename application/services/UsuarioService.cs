@@ -54,8 +54,8 @@ namespace campuslove.application.services
         {
             var lista = _repo.ObtenerTodos();
 
-            Usuario UsuarioElegido =  null;
-            
+            Usuario UsuarioElegido = null;
+
             foreach (var a in lista)
             {
                 if (a.cedula_ciudadania == cedula && a.contraseña == contraseña)

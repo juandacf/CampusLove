@@ -119,61 +119,61 @@ INSERT INTO interes_usuario (cedula_ciudadania, id_interes) VALUES ('1000000020'
 
 -- INSERTS PARA SESION
 
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000001', '2025-05-17 04:55:48', 7, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000002', '2025-04-21 04:55:48', 5, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000003', '2025-05-14 04:55:48', 9, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000004', '2025-04-17 04:55:48', 9, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000005', '2025-05-17 04:55:48', 3, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000006', '2025-04-18 04:55:48', 7, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000007', '2025-05-06 04:55:48', 6, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000008', '2025-05-07 04:55:48', 9, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000009', '2025-05-09 04:55:48', 2, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000010', '2025-04-27 04:55:48', 10, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000011', '2025-05-05 04:55:48', 4, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000012', '2025-04-21 04:55:48', 9, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000013', '2025-04-29 04:55:48', 5, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000014', '2025-05-07 04:55:48', 6, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000015', '2025-05-09 04:55:48', 7, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000016', '2025-05-11 04:55:48', 5, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000017', '2025-05-10 04:55:48', 4, FALSE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000018', '2025-04-18 04:55:48', 7, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000019', '2025-05-16 04:55:48', 10, TRUE);
-INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000020', '2025-04-24 04:55:48', 10, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000001', '2025-05-17 04:55:48', 7, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000002', '2025-04-21 04:55:48', 5, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000003', '2025-05-14 04:55:48', 9, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000004', '2025-04-17 04:55:48', 9, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000005', '2025-05-17 04:55:48', 3, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000006', '2025-04-18 04:55:48', 7, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000007', '2025-05-06 04:55:48', 6, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000008', '2025-05-07 04:55:48', 9, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000009', '2025-05-09 04:55:48', 2, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000010', '2025-04-27 04:55:48', 10, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000011', '2025-05-05 04:55:48', 4, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000012', '2025-04-21 04:55:48', 9, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000013', '2025-04-29 04:55:48', 5, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000014', '2025-05-07 04:55:48', 6, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000015', '2025-05-09 04:55:48', 7, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000016', '2025-05-11 04:55:48', 5, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000017', '2025-05-10 04:55:48', 4, FALSE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000018', '2025-04-18 04:55:48', 7, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000019', '2025-05-16 04:55:48', 10, TRUE);
+-- INSERT INTO sesion (cedula_ciudadania, fecha_ultimo_like, cantidad_likes, usuario_habilitado) VALUES ('1000000020', '2025-04-24 04:55:48', 10, TRUE);
 
 
 -- INSERTS PARA LIKES
 
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000017', '1000000020');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000007', '1000000010');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000018', '1000000014');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000015', '1000000006');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000003', '1000000009');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000015');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000005', '1000000006');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000011', '1000000007');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000011', '1000000020');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000014', '1000000012');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000013', '1000000018');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000012', '1000000010');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000001', '1000000004');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000016', '1000000020');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000015', '1000000003');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000016');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000003');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000007', '1000000016');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000016', '1000000015');
-INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000013', '1000000018');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000017', '1000000020');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000007', '1000000010');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000018', '1000000014');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000015', '1000000006');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000003', '1000000009');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000015');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000005', '1000000006');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000011', '1000000007');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000011', '1000000020');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000014', '1000000012');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000013', '1000000018');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000012', '1000000010');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000001', '1000000004');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000016', '1000000020');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000015', '1000000003');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000016');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000010', '1000000003');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000007', '1000000016');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000016', '1000000015');
+-- INSERT INTO likes (cedula_ciudadania_dador, cedula_ciudadania_recipiente) VALUES ('1000000013', '1000000018');
 
 
 -- INSERTS PARA MATCHES
 
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000009', '1000000014');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000002', '1000000006');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000010', '1000000017');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000004', '1000000014');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000002', '1000000011');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000001', '1000000003');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000006', '1000000010');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000004', '1000000019');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000012', '1000000017');
-INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000016', '1000000018');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000009', '1000000014');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000002', '1000000006');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000010', '1000000017');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000004', '1000000014');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000002', '1000000011');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000001', '1000000003');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000006', '1000000010');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000004', '1000000019');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000012', '1000000017');
+-- INSERT INTO matches (cedula_ciudadania_1, cedula_ciudadania_2) VALUES ('1000000016', '1000000018');

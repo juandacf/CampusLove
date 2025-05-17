@@ -5,7 +5,7 @@ using campuslove.domain.entities;
 using campuslove.domain.factory;
 using campuslove.infrastructure.PostgreSQL;
 using campusLove.application.UI;
-namespace CampusLove.application.UI
+namespace campusLove.application.UI
 {
     public class UIAdminUsuarios
     {
@@ -17,7 +17,7 @@ namespace CampusLove.application.UI
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Este es el menú de usuarios para administrador. Por favor, escoja una de las siguientes opciones: \n1.Agregar Usuario   \n2.Ver Usuarios \n3.Editar Usuario   \n4. Eliminar Usuario  \n0. Volver al menú de admin");
+                Console.WriteLine("Este es el menú de administrador para gestionar usuarios. Por favor, escoja una de las siguientes opciones: \n1.Agregar Usuario   \n2.Ver Usuarios \n3.Editar Usuario   \n4. Eliminar Usuario  \n0. Volver al menú de admin");
                 Console.WriteLine("Opción: ");
                 ConsoleKeyInfo KeyPressed = Console.ReadKey();
                 switch (KeyPressed.KeyChar)

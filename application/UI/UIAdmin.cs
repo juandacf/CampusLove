@@ -1,6 +1,5 @@
 using campuslove.application.UI;
 using campusLove.application.UI;
-using CampusLove.application.UI;
 
 namespace campusLove.application.UI
 {

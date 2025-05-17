@@ -26,5 +26,23 @@ namespace campuslove.application.UI
                     return false;
             }
         }
+
+        public static bool VerificadorBooleano()
+        {
+            char keyInfo = Console.ReadKey(true).KeyChar;
+            switch (keyInfo)
+            {
+                case 't':
+                    return true;
+                case 'f':
+                    return false;
+                default:
+                    Console.WriteLine("La opción ingresada no corresponde con ninguna de nuestras opciones de género. Presione enter, y vuelva a empezar.");
+                    Console.ReadKey();
+                    VerificadorBooleano();
+                    return false;
+
+            }
+        }
     }
 }

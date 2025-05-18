@@ -102,6 +102,10 @@ namespace campuslove.application.services
             return listaFinalUsuarios;
         }
 
-
+        public List<Usuario> RetornarTodosUsuarios()
+        {
+            var ListaUsuarios = _repo.ObtenerTodos();
+            return ListaUsuarios;
+        }
     }
 }

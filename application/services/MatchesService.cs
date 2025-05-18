@@ -34,9 +34,23 @@ namespace campusLove.application.services
             var lista = _repo.ObtenerTodos();
             foreach (var item in lista)
             {
-                
+
                 Console.WriteLine($"ID match: {item.id_match}   cedula1: {item.cedula_ciudadania_1}   cedula2 {item.cedula_ciudadania_2}");
             }
+        }
+
+        public List<Matches> MostrarMatchesUsuario(string cedula)
+        {
+            var lista = _repo.ObtenerTodos();
+            List<Matches> ListaFiltrada = new List<Matches>();
+            foreach (var item in lista)
+            {
+                if (item.cedula_ciudadania_1 == cedula || item.cedula_ciudadania_2 == cedula)
+                {
+                    ListaFiltrada.Add(item);
+                }
+            }
+            return ListaFiltrada;
         }
 
     }

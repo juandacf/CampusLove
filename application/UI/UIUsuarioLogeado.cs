@@ -7,6 +7,7 @@ using campuslove.application.services;
 using campuslove.domain.entities;
 using campuslove.domain.factory;
 using campuslove.infrastructure.PostgreSQL;
+using campusLove.application.services;
 using campusLove.application.UI;
 
 namespace campuslove.application.UI
@@ -20,6 +21,7 @@ namespace campuslove.application.UI
                 IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
                 var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
                 var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
+                var ServicioMatch = new MatchesService(factory.CreateMatchesRepository());
                 Console.Clear();
                 Console.WriteLine($"Bienvenido,{UIUsuario.UsuarioLoggeado.nombre}");
                 Console.WriteLine($"Por favor, escoja una de las siguientes opciones: \n1.Editar mis datos  \n2.Dar Likes  \n3.Ver Matches \n 4.Ver estadísticas notables de usuarios  \n5.Eliminar mi cuenta   \n 0.Cerrar sesión");
@@ -69,6 +71,26 @@ namespace campuslove.application.UI
 
                         break;
                     case '3':
+                        Console.Clear();
+                        var MatchesUsuario = ServicioMatch.MostrarMatchesUsuario(UI.UIUsuario.UsuarioLoggeado.cedula_ciudadania);
+                        var Usuarios = ServicioUsuario.RetornarTodosUsuarios();
+
+                        foreach (var user in Usuarios)
+                        {
+                            foreach (var item in MatchesUsuario)
+                            {
+                                if (user.cedula_ciudadania !=UI.UIUsuario.UsuarioLoggeado.cedula_ciudadania) {
+                                    if (user.cedula_ciudadania == item.cedula_ciudadania_1 || user.cedula_ciudadania == item.cedula_ciudadania_2)
+                                {
+                                        Console.WriteLine($"Match|| Nombre: {user.nombre} Apellid0: {user.apellido}");
+                                } 
+                                }
+                                
+                            }
+                        }
+
+                        Console.WriteLine("Por favor, presione enter para continuar");
+                        Console.ReadKey(true);
                         break;
                     case '4':
                         break;

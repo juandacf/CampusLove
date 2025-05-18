@@ -20,6 +20,7 @@ namespace campuslove.application.UI
             var ServicioLike = new LikesService(factory.CreateLikeRepository());
             string CedulaUsuarioLoggeado = UIUsuario.UsuarioLoggeado.cedula_ciudadania;
             var UsersToLike = ServicioUsuario.ObtenerUsuariosSinLike(CedulaUsuarioLoggeado);
+            int LikesDisponibles = UIUsuario.SesionLoggeada.cantidad_likes;
             foreach (var item in UsersToLike)
             {
                 Console.Clear();
@@ -35,7 +36,7 @@ namespace campuslove.application.UI
                 Console.WriteLine($"nombre: {item.nombre}  apellido: {item.apellido} Genero: {GeneroPersona} ");
                 Console.WriteLine("¿Desea darle like a esta persona? t/f");
                 bool Like = UIUtils.VerificadorBooleano();
-
+                LikesDisponibles -= 1;
                 if (Like)
                 {
                     Console.Clear();
@@ -46,8 +47,19 @@ namespace campuslove.application.UI
                         cedula_ciudadania_recipiente = item.cedula_ciudadania
                     };
                     ServicioLike.CrearLike(like);
+                    
+                    if (LikesDisponibles <= 0)
+                    {
+                        Console.WriteLine("Los likes se te han acabado:(. Cuando tengas más, vuelve y sigue haciendo match:). Presiona enter para volver al menú de usuarios.");
+                        Console.ReadKey(true);
+                        UIUsuario.UsuarioLoggeado = null;
+                        UIUsuario.SesionLoggeada = null;
+                        UIUsuario.MenuUsuario();
+
+                    }
                     Console.WriteLine("El like pudo ser guardado con éxito. ¿Desea continuar dando likes? t/f.");
                     bool continar = UIUtils.VerificadorBooleano();
+                   
                     if (!continar)
                     {
                         UIUsuarioLogeado.MenuUsuarioLogeado();
@@ -65,7 +77,7 @@ namespace campuslove.application.UI
                     }
                 }
 
-                
+
             }
                 Console.Clear();
                 Console.WriteLine("No hay más usuarios para ser likeados. Por favor, oprima enter para volver al menú ");

@@ -60,7 +60,13 @@ namespace campuslove.application.UI
                         break;
                     case '2':
                         Console.Clear();
-                        UI.UIUsuarioDarLikes.MenuUsuarioDarLikes();
+                        if (UIUsuario.SesionLoggeada.usuario_habilitado)
+                        {
+                            UI.UIUsuarioDarLikes.MenuUsuarioDarLikes();
+                        }
+                        Console.WriteLine("El usuario no tiene likes. presione enter para volver al menú ");
+                        Console.ReadKey(true);
+
                         break;
                     case '3':
                         break;
@@ -74,6 +80,7 @@ namespace campuslove.application.UI
                         {
                             ServicioUsuario.EliminarUsuario(UI.UIUsuario.UsuarioLoggeado.cedula_ciudadania);
                             UI.UIUsuario.UsuarioLoggeado = null;
+                            UI.UIUsuario.SesionLoggeada = null;
                             Console.WriteLine("El usuario se ha borrado con éxito. Por favor, presione enter para volver al menú principal.");
                             Console.ReadKey(true);
                             UIMenuPrincipal.MenuPrincipal();

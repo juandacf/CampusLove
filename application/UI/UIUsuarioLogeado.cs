@@ -93,6 +93,7 @@ namespace campuslove.application.UI
                         Console.ReadKey(true);
                         break;
                     case '4':
+                        UIEstadisticasNotables.MenuEstadisticasNotables();
                         break;
                     case '5':
                         Console.Clear();

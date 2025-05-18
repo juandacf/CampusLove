@@ -95,10 +95,11 @@ namespace campuslove.application.services
                         usuarioTieneLike = true;
                     }
                 }
-                if (!usuarioTieneLike){
+                if (!usuarioTieneLike)
+                {
                     listaFinalUsuarios.Add(item);
                 }
-            }           
+            }
             return listaFinalUsuarios;
         }
 
@@ -107,5 +108,74 @@ namespace campuslove.application.services
             var ListaUsuarios = _repo.ObtenerTodos();
             return ListaUsuarios;
         }
+
+        public void RetornarCantidadGeneros()
+        {
+            var ListaUsuarios = _repo.ObtenerTodos();
+            int CantidadHombres = 0;
+            int CantidadMujeres = 0;
+            foreach (var user in ListaUsuarios)
+            {
+                if (user.genero)
+                {
+                    CantidadHombres += 1;
+                }
+                else
+                {
+                    CantidadMujeres += 1;
+                }
+            }
+
+            Console.WriteLine($"La cantidad de hombres es {CantidadHombres}. La cantidad de mujeres es {CantidadMujeres} ");
+        }
+
+        public void RetornarCarreraMasCursada()
+        {
+            var lista = _repo.ObtenerTodos();
+            IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
+            var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
+            var Carreras = ServicioCarrera.RetornarCarreras();
+
+            var resultado = lista
+    .GroupBy(u => u.id_carrera)
+    .OrderByDescending(g => g.Count())
+    .Select(g => (IdCarrera: g.Key, Cantidad: g.Count()))
+    .FirstOrDefault();
+
+
+            foreach (var item in Carreras)
+            {
+                if (item.id_carrera == resultado.IdCarrera)
+                {
+                    Console.WriteLine($"La carrera con el id: {item.id_carrera} y el nombre {item.nombre_carrera} es la más cursada con un total de {resultado.Cantidad} profesionales.");
+                }
+            }
+
+        }
+
+        public void MayorCantidadMatches()
+        {
+            var lista = _repo.ObtenerTodos();
+            IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
+            var ServicioMatch = new MatchesService(factory.CreateMatchesRepository());
+            var matches = ServicioMatch.RetornarTodosMatches();
+
+            var cedulaMasComun = matches
+    .SelectMany(m => new[] { m.cedula_ciudadania_1, m.cedula_ciudadania_2 }) // Unificamos ambas columnas
+    .GroupBy(cedula => cedula)
+    .OrderByDescending(g => g.Count())
+    .Select(g => new { Cedula = g.Key, Cantidad = g.Count() })
+    .FirstOrDefault();
+
+        foreach (var item in lista){
+                if (cedulaMasComun.Cedula == item.cedula_ciudadania)
+                {
+                    Console.WriteLine($"El usuario {item.nombre} {item.apellido}, (cc: {item.cedula_ciudadania}) Es el usuario con mas matches. tiene un total del {cedulaMasComun.Cantidad} matches ");
+         }
+        }
+
+        }
+
+
     }
 }

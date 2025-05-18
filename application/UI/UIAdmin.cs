@@ -10,7 +10,7 @@ namespace campusLove.application.UI
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Por favor, escoja alguna de las siguientes opciones de adminsitrador: \n1.Gestionar usuarios  \n2.Gestionar Intereses \n3. Gestionar sesiones \n4.Gestionar Carreras \n0.Volver al menú principal ");
+                Console.WriteLine("Por favor, escoja alguna de las siguientes opciones de adminsitrador: \n1.Gestionar usuarios  \n2.Gestionar Intereses \n3. Gestionar sesiones \n4.Gestionar Carreras  \n5.Ver Estadisticas notables \n0.Volver al menú principal ");
                 Console.WriteLine("Opción: ");
                 ConsoleKeyInfo KeyPressed = Console.ReadKey();
                 switch (KeyPressed.KeyChar)
@@ -26,6 +26,9 @@ namespace campusLove.application.UI
                         break;
                     case '4':
                         UIAdminCarrera.MenuAdminCarrera();
+                        break;
+                    case '5':
+                        UIEstadisticasNotables.MenuEstadisticasNotables();
                         break;
                     case '0':
                         Console.Clear();

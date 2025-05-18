@@ -53,5 +53,11 @@ namespace campusLove.application.services
             return ListaFiltrada;
         }
 
+        public List<Matches> RetornarTodosMatches()
+        {
+            var lista = _repo.ObtenerTodos();
+            return lista;
+        }
+
     }
 }

@@ -50,33 +50,8 @@ El repositorio está organizado en las siguientes capas:
 
 ## 📌 Estado del Proyecto
 
-Este proyecto se encuentra en desarrollo activo. Se están implementando nuevas funcionalidades y mejoras continuamente. Se agradece cualquier tipo de colaboración o sugerencia.
+Este proyecto se encuentra en desarrollo terminado. 
 
-## 🤝 Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas colaborar:
-
-1. Haz un fork del repositorio.
-
-2. Crea una nueva rama con tu funcionalidad:
-
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-
-3. Realiza tus cambios y haz commit:
-
-   ```bash
-   git commit -m "Agrega nueva funcionalidad"
-   ```
-
-4. Sube tus cambios al repositorio:
-
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ```
-
-5. Abre un Pull Request detallando tus cambios.
 
 ## 📄 Licencia
 

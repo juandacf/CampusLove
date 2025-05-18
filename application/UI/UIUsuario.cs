@@ -13,6 +13,7 @@ namespace campuslove.application.UI
     public class UIUsuario
     {
         public static Usuario UsuarioLoggeado;
+        public static Sesion SesionLoggeada;
         public static void MenuUsuario()
         {
             while (true)
@@ -20,6 +21,7 @@ namespace campuslove.application.UI
                 IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
                 var ServicioCarrera = new CarreraService(factory.CreateCarreraRepository());
                 var ServicioUsuario = new UsuarioService(factory.CreateUsuarioRepository());
+                var ServicioSesion = new SesionService(factory.CreateSesionRepository());
                 Console.Clear();
                 Console.WriteLine("Bienvenido a CampusLove, usuario. Por favor, escoja alguna de las siguientes opciones:\n1.Crear Usuario   \n2.Ingresar  \n0.Volver al menú anterior ");
                 Console.WriteLine("Opción: ");
@@ -44,6 +46,7 @@ namespace campuslove.application.UI
                         ServicioCarrera.VerCarrera();
                         Console.WriteLine("Por favor, ingrese el id de su carrera: ");
                         int IdCarreraUsuario = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Por favor, ingrese el género del usuario h/m");
                         bool GeneroUsuario = UIUtils.VerificadorGenero();
                         Usuario usuario = new Usuario
                         {
@@ -64,12 +67,16 @@ namespace campuslove.application.UI
                         Console.WriteLine("Por favor, ingresa tu cédula de ciudadanía");
                         string CedulaLogin = Console.ReadLine();
                         Console.WriteLine("Por favor, ingresa tu contraaseña");
-                        string ContraseñaLogin = Console.ReadLine();                        
+                        string ContraseñaLogin = Console.ReadLine();
                         UsuarioLoggeado = ServicioUsuario.LoginUsuario(CedulaLogin, ContraseñaLogin);
                         if (UsuarioLoggeado != null)
                         {
+                            
+                            Console.WriteLine("El usuario se pudo verificar. presione enter para continuar.");
+                            UIUsuario.SesionLoggeada = ServicioSesion.RetornarSesion(UsuarioLoggeado.cedula_ciudadania);
                             Console.ReadKey(true);
                             UIUsuarioLogeado.MenuUsuarioLogeado();
+
 
                         }
                         else

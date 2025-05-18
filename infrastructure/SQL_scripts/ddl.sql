@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS likes (
     cedula_ciudadania_dador VARCHAR,
     cedula_ciudadania_recipiente VARCHAR,
     PRIMARY KEY(id),
-    FOREIGN KEY (cedula_ciudadania_dador) REFERENCES usuario(cedula_ciudadania),
-    FOREIGN KEY(cedula_ciudadania_recipiente)  REFERENCES usuario(cedula_ciudadania)
+    FOREIGN KEY (cedula_ciudadania_dador) REFERENCES usuario(cedula_ciudadania) ON DELETE CASCADE,
+    FOREIGN KEY(cedula_ciudadania_recipiente)  REFERENCES usuario(cedula_ciudadania) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS matches (
@@ -51,8 +51,8 @@ CREATE TABLE IF NOT EXISTS matches (
     cedula_ciudadania_1 VARCHAR,
     cedula_ciudadania_2 VARCHAR,
     PRIMARY KEY(id),
-    FOREIGN KEY(cedula_ciudadania_1) REFERENCES usuario(cedula_ciudadania),
-    FOREIGN KEY(cedula_ciudadania_2) REFERENCES usuario(cedula_ciudadania)
+    FOREIGN KEY(cedula_ciudadania_1) REFERENCES usuario(cedula_ciudadania) ON DELETE CASCADE,
+    FOREIGN KEY(cedula_ciudadania_2) REFERENCES usuario(cedula_ciudadania) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS interes_usuario (

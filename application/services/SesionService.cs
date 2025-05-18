@@ -11,28 +11,45 @@ namespace campuslove.application.services
     {
         private readonly ISesionRepository _repo;
 
-        public SesionService(ISesionRepository repo){
+        public SesionService(ISesionRepository repo)
+        {
             _repo = repo;
         }
 
-        public void CrearSesion (Sesion sesion){
+        public void CrearSesion(Sesion sesion)
+        {
             _repo.Crear(sesion);
         }
 
-        public void EliminarSesion(int IdSesion){
+        public void EliminarSesion(int IdSesion)
+        {
             _repo.Eliminar(IdSesion);
         }
 
-        public void EditarSesion(Sesion sesion){
+        public void EditarSesion(Sesion sesion)
+        {
             _repo.Actualizar(sesion);
         }
 
-        public void verSesion (){
+        public void verSesion()
+        {
             var lista = _repo.ObtenerTodos();
             foreach (var item in lista)
             {
                 Console.WriteLine($"idSesion: {item.id_sesion}  CC: {item.cedula_ciudadania_ciudadania}  fecha ultimo like: {item.fecha_ultimo_like}  cantidad likes:  {item.cantidad_likes}  usuario habilitado: {item.usuario_habilitado}");
             }
+        }
+
+        public Sesion RetornarSesion(string cedula)
+        {
+            var lista = _repo.ObtenerTodos();
+            Sesion sesion = null;
+
+            sesion = (from sesiones in lista
+                      where sesiones.cedula_ciudadania_ciudadania == cedula
+                      select sesiones).FirstOrDefault();
+
+            return sesion;
         }
     }
 }

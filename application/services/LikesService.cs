@@ -34,5 +34,12 @@ namespace campusLove.application.services
             }
         }
 
+        public List<Like> RetornarLikes()
+        {
+            var Lista = _repo.ObtenerTodos();
+
+            return Lista;
+        }
+
     }
 }

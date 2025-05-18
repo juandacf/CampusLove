@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using campuslove.domain.entities;
 using campuslove.domain.ports;
+using campuslove.application.services;
+using campuslove.domain.factory;
+using campuslove.infrastructure.PostgreSQL;
+using campusLove.application.services;
 
 namespace campuslove.application.services
 {
@@ -66,6 +70,36 @@ namespace campuslove.application.services
             }
 
             return UsuarioElegido;
+        }
+
+        public List<Usuario> ObtenerUsuariosSinLike(string cedula)
+        {
+            IDbFactory factory = new PostgresDbFactory(DbParameters.Parameters);
+            var ServicioLike = new LikesService(factory.CreateLikeRepository());
+
+            var ListaLikes = ServicioLike.RetornarLikes();
+            var listaInicialUsuarios = _repo.ObtenerTodos();
+            List<Usuario> listaFinalUsuarios = new List<Usuario>();
+
+            var ListaLikesFiltrada = from likes in ListaLikes
+                                     where likes.cedula_ciudadania_dador == cedula
+                                     select likes;
+
+            foreach (var item in listaInicialUsuarios)
+            {
+                bool usuarioTieneLike = false;
+                foreach (var element in ListaLikesFiltrada)
+                {
+                    if (item.cedula_ciudadania == element.cedula_ciudadania_recipiente)
+                    {
+                        usuarioTieneLike = true;
+                    }
+                }
+                if (!usuarioTieneLike){
+                    listaFinalUsuarios.Add(item);
+                }
+            }           
+            return listaFinalUsuarios;
         }
 
 

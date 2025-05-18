@@ -13,8 +13,9 @@ namespace campuslove.infrastructure.repositories
     public class ImpUsuarioRepository : IGenericRepository<Usuario>, IUsuarioRepository
     {
         private readonly ConexionPostgresSingleton _conexion;
-        public ImpUsuarioRepository (string connectionString){
-                 _conexion = ConexionPostgresSingleton.Instancia(connectionString);
+        public ImpUsuarioRepository(string connectionString)
+        {
+            _conexion = ConexionPostgresSingleton.Instancia(connectionString);
         }
         public void Actualizar(Usuario entity)
         {
@@ -29,22 +30,22 @@ namespace campuslove.infrastructure.repositories
             cedula_ciudadania);
             cmd.Parameters.AddWithValue("@contraseña", entity.contraseña);
             cmd.ExecuteNonQuery();
-            
-            
+
+
         }
 
         public void Crear(Usuario entity)
         {
             var connection = _conexion.ObtenerConexion();
             string query = "INSERT INTO usuario(cedula_ciudadania, nombre, apellido, genero, id_carrera, contraseña) VALUES(@cedula_ciudadania, @nombre, @apellido, @genero, @id_carrera, @contraseña)";
-             using var cmd = new NpgsqlCommand(query, connection);
-             cmd.Parameters.AddWithValue("@cedula_ciudadania", entity.cedula_ciudadania);
-             cmd.Parameters.AddWithValue("@nombre", entity.nombre);
-             cmd.Parameters.AddWithValue("@apellido", entity.apellido);
-             cmd.Parameters.AddWithValue("@genero", entity.genero);
-             cmd.Parameters.AddWithValue("@id_carrera", entity.id_carrera);
-             cmd.Parameters.AddWithValue("@contraseña", entity.contraseña);
-             cmd.ExecuteNonQuery();
+            using var cmd = new NpgsqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@cedula_ciudadania", entity.cedula_ciudadania);
+            cmd.Parameters.AddWithValue("@nombre", entity.nombre);
+            cmd.Parameters.AddWithValue("@apellido", entity.apellido);
+            cmd.Parameters.AddWithValue("@genero", entity.genero);
+            cmd.Parameters.AddWithValue("@id_carrera", entity.id_carrera);
+            cmd.Parameters.AddWithValue("@contraseña", entity.contraseña);
+            cmd.ExecuteNonQuery();
 
 
         }
@@ -52,7 +53,7 @@ namespace campuslove.infrastructure.repositories
         public void Eliminar(int var)
         {
             throw new NotImplementedException();
-            
+
         }
 
         public void Eliminar(string var)
@@ -72,7 +73,8 @@ namespace campuslove.infrastructure.repositories
             string query = "SELECT cedula_ciudadania, nombre, apellido, genero, id_carrera, contraseña FROM usuario";
             using var cmd = new NpgsqlCommand(query, connection);
             using var reader = cmd.ExecuteReader();
-            while(reader.Read()){
+            while (reader.Read())
+            {
                 UsuarioList.Add(new Usuario
                 {
                     cedula_ciudadania = reader.GetString("cedula_ciudadania"),

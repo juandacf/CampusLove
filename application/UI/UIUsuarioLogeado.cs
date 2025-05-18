@@ -60,7 +60,7 @@ namespace campuslove.application.UI
                         break;
                     case '2':
                         Console.Clear();
-
+                        UI.UIUsuarioDarLikes.MenuUsuarioDarLikes();
                         break;
                     case '3':
                         break;

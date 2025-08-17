@@ -14,6 +14,7 @@ namespace campuslove.application.services
         public CarreraService(ICarreraRepository repo)
         {
             _repo = repo;
+            Console.WriteLine("Hola")
         }
 
         public void CrearCarrera(Carrera carrera)
